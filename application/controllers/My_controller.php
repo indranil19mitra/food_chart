@@ -22,13 +22,12 @@ class My_controller extends CI_Controller
 
     public function homePage()
     {
-        $data['page'] = 'index';
+        echo "abcd";
+        exit;
+        $data['page'] = 'Home';
         $html = $this->load->view('home', $data, true);
         $result = array('html' => $html, 'status' => 'success');
         $obj = (object) array_merge((array) $result);
         echo json_encode($obj);
-        // $this->temp->template('home');
-        // $result = array('status' => 'success');
-        // echo json_encode($result);
     }
 }
