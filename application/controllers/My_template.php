@@ -8,23 +8,23 @@ class My_template extends CI_controller
         parent::__construct();
     }
 
-    // public function template_one($data = null)
-    // {
-    //     $this->load->view('template/dashboard', $data);
-    // }
-
-    public function template($template_name, $vars = array(), $return = FALSE)
+    public function template_one($data = null)
     {
-        if ($return) :
-            $content  = $this->load->view('include/header', $vars, $return);
-            $content .= $this->load->view($template_name, $vars, $return);
-            $content .= $this->load->view('include/footer', $vars, $return);
-
-            return $content;
-        else :
-            $this->load->view('include/header', $vars);
-            $this->load->view($template_name, $vars);
-            $this->load->view('include/footer', $vars);
-        endif;
+        $this->load->view('template/dashboard', $data);
     }
+
+    // public function template($template_name, $vars = array(), $return = FALSE)
+    // {
+    //     if ($return) :
+    //         $content  = $this->load->view('include/header', $vars, $return);
+    //         $content .= $this->load->view($template_name, $vars, $return);
+    //         $content .= $this->load->view('include/footer', $vars, $return);
+
+    //         return $content;
+    //     else :
+    //         $this->load->view('include/header', $vars);
+    //         $this->load->view($template_name, $vars);
+    //         $this->load->view('include/footer', $vars);
+    //     endif;
+    // }
 }
