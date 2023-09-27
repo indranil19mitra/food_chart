@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('no direct script access allow');
 
 class My_controller extends CI_Controller
 {
-    public $temp;
+    public $temp = null;
     function __construct()
     {
         parent::__construct();
@@ -14,20 +14,16 @@ class My_controller extends CI_Controller
 
     public function index()
     {
-        // $data['page'] = 'index';
-        // $data['page_title'] = $data['page'];
-        // $this->temp->template_one($data);
-        $this->temp->template('index');
+        $data['page'] = 'index';
+        $data['page_title'] = $data['page'];
+        $this->temp->template_one($data);
+        // $this->temp->template('index');
     }
 
-    public function homePage()
+    public function home_page()
     {
-        echo "abcd";
-        exit;
-        $data['page'] = 'Home';
-        $html = $this->load->view('home', $data, true);
-        $result = array('html' => $html, 'status' => 'success');
-        $obj = (object) array_merge((array) $result);
-        echo json_encode($obj);
+        $data['page'] = 'home/index';
+        $data['page_title'] = $data['page'];
+        $this->temp->template_one($data);
     }
 }

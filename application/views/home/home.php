@@ -1,1 +1,0 @@
-<label id="home_page">Home</label>
