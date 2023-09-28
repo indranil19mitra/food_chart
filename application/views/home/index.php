@@ -14,17 +14,29 @@
                 <!-- <button class="rounded-pill" type="radio"> -->
                 <!-- <div class="border border-dark rounded-pill p-1"> -->
                 <div>
-                    <input class="form-check-input rounded-pill" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input rounded-pill" type="radio" id="veg" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault1">Veg</label>
                 </div>
                 <!-- <div class="border border-dark rounded-pill ms-2 p-1"> -->
                 <div class="ms-2 ">
-                    <input class="form-check-input rounded-pill" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input rounded-pill" type="radio" id="n_veg" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault1">Non Veg</label>
                 </div>
                 <!-- </button> -->
             </div>
         </div>
     </div>
-    <?php $this->load->view('home/component/home_body'); ?>
+    <div class="mt-2 mb-2">
+        <label for="categories" class="ctgry">Categories</label>
+    </div>
+    <?php
+    $item_names = ['Sharba', 'Starters & Fries', 'Kababs', 'Sizziers', 'Biriyani', 'Thalis & Combos', 'Rice & Breads', 'Desserts', 'Mocktails & Drinks', 'Grivies & Curries', 'Special Menu'];
+    $item_images = [base_url() . 'assets/images/home_default_category_image.jpg'];
+
+    $data = [
+        'item_names' => $item_names,
+        'item_images' => $item_images
+    ];
+    ?>
+    <?php $this->load->view('home/component/home_body', $data); ?>
 </div>
