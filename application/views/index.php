@@ -4,7 +4,7 @@
     </div> -->
 
     <div class="row d-flex justify-content-center">
-        <img src="<?= base_url() ?>assets/images/login_page_top_img2.png" class="login_page_top_img" alt="">
+        <img src="<?= base_url() ?>assets/images/login_page_top_img2.png" class="login_page_top_img img_width_height" alt="">
     </div>
     <div class="row hotel_names">
         <label class="text-center" for="">House of Royals</label>
