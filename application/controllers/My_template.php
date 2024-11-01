@@ -8,11 +8,6 @@ class My_template extends CI_controller
         parent::__construct();
     }
 
-    // public function template_one($data = null)
-    // {
-    //     $this->load->view('template/dashboard', $data);
-    // }
-
     public function template($template_name, $vars = array(), $return = FALSE)
     {
         if ($return) :

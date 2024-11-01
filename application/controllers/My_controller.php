@@ -14,9 +14,6 @@ class My_controller extends CI_Controller
 
     public function index()
     {
-        // $data['page'] = 'index';
-        // $data['page_title'] = $data['page'];
-        // $this->temp->template_one($data);
         $this->temp->template('index');
     }
 
@@ -27,8 +24,5 @@ class My_controller extends CI_Controller
         $result = array('html' => $html, 'status' => 'success');
         $obj = (object) array_merge((array) $result);
         echo json_encode($obj);
-        // $this->temp->template('home');
-        // $result = array('status' => 'success');
-        // echo json_encode($result);
     }
 }

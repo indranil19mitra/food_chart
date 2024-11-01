@@ -1,8 +1,4 @@
 <div class="container-fluid index_body_page">
-    <!-- <div class="row parent_div">
-        <img src="<?= base_url(); ?>assets\images\index_page_background_theme.jpg" alt="" class="img_css">
-    </div> -->
-
     <div class="row d-flex justify-content-center">
         <img src="<?= base_url() ?>assets/images/login_page_top_img2.png" class="login_page_top_img" alt="">
     </div>
