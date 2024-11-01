@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="<?= base_url() ?>assets/mycss/myappcss.css">
